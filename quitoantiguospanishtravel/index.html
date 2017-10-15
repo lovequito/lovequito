@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>LoveQuito</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/main.css?v=0.0.1">
+    <script src="static/js/main.js?v=0.0.1"></script>
+	<link rel="icon" type="image/png" sizes="16x16" href="static/img/icons/icon.png">
+</head>
+
+<body>
+
+<div class="container-main">
+
+<!-- -->
+	<nav class="nav-top">
+		<a href="#" class="nav-top-logo"></a>
+		<ul>
+			<li><a href="#">Conócenos</a></li>
+			<li><a href="#">Experiencias</a></li>
+			<li><a href="#">Perfiles</a></li>
+			<li><a href="#">Eventos</a></li>
+			<li><a href="#">Lugares</a></li>
+			<li><a href="#">Tienda</a></li>
+			<li><a href="#">Servicios</a></li>
+			<li><a href="#">Contacto</a></li>
+		</ul>
+
+		<div class="nav-top-right">
+			<ul>
+			<a href="#" class="nav-top-button">Involúcrate</a>
+			</ul>
+			<ul>
+				<div class="socialIcons">
+					<a target="_blank" href="#" class="sfacebook"><span></span>Facebook</a>
+					<a target="_blank" href="#" class="stwitter"><span></span>Twitter</a>
+					<a target="_blank" href="#" class="sinstagram"><span></span>Instagram</a>
+				</div>
+			</ul>
+		</div>
+	</nav>
+
+<!-- -->
+	<header class="header-main">
+		<div class="header-main-img">
+			<div class="header-main-glass">
+				<div class="header-main-content">
+					<h1>Encuentra tu vocación</h1>
+					<h2>Hazte Catequista Sopeña</h2>
+					<div class="line"></div>
+					
+					<a href="#" class="button">Comienza hoy</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+<!-- -->
+	<section class="oracle">
+		<div class="yang"></div>
+		<div class="ying">
+			<div class="padding40">
+				<div class="line"></div>
+				<div class="line"></div>
+				<h2>Encuentra tu vocación</h2>
+				<h4>Somos Catequistas Sopeña</h4>
+				<div class="line"></div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<div class="line"></div>
+				<div class="line"></div>
+				<a href="#" class="button">Comienza hoy</a>
+			</div>
+		</div>
+	</section>
+
+<!-- -->
+	<section class="articles-rock">
+		<article>
+			<img src="static/img/articles/01.jpg">
+			<h4>Comparte nuevas experiencias</h4>
+		</article>
+
+		<article>
+			<img src="static/img/articles/01.jpg">
+			<h4>Comparte nuevas experiencias</h4>
+		</article>
+
+		<article>
+			<img src="static/img/articles/01.jpg">
+			<h4>Comparte nuevas experiencias</h4>
+		</article>
+
+		<article>
+			<img src="static/img/articles/01.jpg">
+			<h4>Comparte nuevas experiencias</h4>
+		</article>
+
+		<article>
+			<img src="static/img/articles/01.jpg">
+			<h4>Comparte nuevas experiencias</h4>
+		</article>
+	</section>
+
+<!-- -->
+	<section class="news">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</section>
+
+
+<!-- -->
+	<section class="pinterest-main">
+		<article>
+			<figure>
+				<img src="static/img/articles/01.jpg">
+			</figure>
+		</article>
+
+		<article>
+			<figure>
+				<img src="static/img/articles/01.png">
+			</figure>
+		</article>
+
+		<article>
+			<figure>
+				<img src="static/img/articles/01.png">
+			</figure>
+		</article>		
+	</section>
+
+
+<!-- -->
+	<section class="articles-love">
+
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- -->
+	<section class="Gmap-main">
+		<div id="map"></div>
+
+		<script>
+
+		function initMap() {
+
+		  var map = new google.maps.Map(document.getElementById('map'), {
+		    zoom: 12,
+		    center: {lat: -33.9, lng: 151.2}
+		  });
+
+		  setMarkers(map);
+		}
+
+		// Data for the markers consisting of a name, a LatLng and a zIndex for the
+		// order in which these markers should display on top of each other.
+		var beaches = [
+		  ['Bondi Beach', -33.890542, 151.274856, 4],
+		  ['Coogee Beach', -33.923036, 151.259052, 5],
+		  ['Cronulla Beach', -34.028249, 151.157507, 3],
+		  ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+		  ['Maroubra Beach', -33.950198, 151.259302, 1]
+		];
+
+		function setMarkers(map) {
+		  // Adds markers to the map.
+
+		  // Marker sizes are expressed as a Size of X,Y where the origin of the image
+		  // (0,0) is located in the top left of the image.
+
+		  // Origins, anchor positions and coordinates of the marker increase in the X
+		  // direction to the right and in the Y direction down.
+
+			  var contentString = '<div id="content">'+
+				            '<div id="siteNotice">'+
+				            '</div>'+
+				            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+				            '<div id="bodyContent">'+
+				            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+				            'sandstone rock formation in the southern part of the '+
+				            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+				            'south west of the nearest large town, Alice Springs; 450&#160;km '+
+				            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+				            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+				            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+				            'Aboriginal people of the area. It has many springs, waterholes, '+
+				            'rock caves and ancient paintings. Uluru is listed as a World '+
+				            'Heritage Site.</p>'+
+				            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+				            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+				            '(last visited June 22, 2009).</p>'+
+				            '</div>'+
+				            '</div>';
+
+		  // Shapes define the clickable region of the icon. The type defines an HTML
+		  // <area> element 'poly' which traces out a polygon as a series of X,Y points.
+		  // The final coordinate closes the poly by connecting to the first coordinate.
+			  var shape = {
+			    coords: [1, 1, 1, 20, 18, 20, 18, 1],
+			    type: 'poly'
+			  };
+
+			  var image = {
+						    url: 'static/img/icons/icon.png',
+
+						    scaledSize: new google.maps.Size(30, 30)
+
+						  };
+
+			for (var i = 0; i < beaches.length; i++) {
+
+			    var beach = beaches[i];
+
+			    var marker = new google.maps.Marker({
+			      position: {lat: beach[1], lng: beach[2]},
+			      map: map,
+			      icon: image,
+			      shape: shape,
+			      title: beach[0],
+			      zIndex: beach[3]
+			    });
+
+			    var infowindow = new google.maps.InfoWindow({
+				          content: contentString
+				        });
+
+			    marker.addListener('click', function() {
+				          infowindow.open(map, marker);
+				        });
+			}
+
+		}
+
+			    </script>
+			    
+	     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvrpMYA6xf3Uqx5ES3qDI_SbU6n2Eiz28&signed_in=true&callback=initMap"
+        async defer></script>
+
+	</section>	
+
+</div>
+</body>
+</html>

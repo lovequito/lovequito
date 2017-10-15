@@ -265,63 +265,17 @@
 
 		<script>
 
-		function initMap() {
+				function initMap() {
 
-		  var map = new google.maps.Map(document.getElementById('map'), {
-		    zoom: 12,
-		    center: {lat: -33.9, lng: 151.2}
-		  });
+				  var map = new google.maps.Map(document.getElementById('map'), {
+				    zoom: 7,
+				    center: {lat: -1.4340136, lng: -84.4149134}
+				  });
 
-		  setMarkers(map);
-		}
+				  setMarkers(map);
+				}
 
-		// Data for the markers consisting of a name, a LatLng and a zIndex for the
-		// order in which these markers should display on top of each other.
-		var beaches = [
-		  ['Bondi Beach', -33.890542, 151.274856, 4],
-		  ['Coogee Beach', -33.923036, 151.259052, 5],
-		  ['Cronulla Beach', -34.028249, 151.157507, 3],
-		  ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-		  ['Maroubra Beach', -33.950198, 151.259302, 1]
-		];
-
-		function setMarkers(map) {
-		  // Adds markers to the map.
-
-		  // Marker sizes are expressed as a Size of X,Y where the origin of the image
-		  // (0,0) is located in the top left of the image.
-
-		  // Origins, anchor positions and coordinates of the marker increase in the X
-		  // direction to the right and in the Y direction down.
-
-			  var contentString = '<div id="content">'+
-				            '<div id="siteNotice">'+
-				            '</div>'+
-				            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-				            '<div id="bodyContent">'+
-				            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-				            'sandstone rock formation in the southern part of the '+
-				            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-				            'south west of the nearest large town, Alice Springs; 450&#160;km '+
-				            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-				            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-				            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-				            'Aboriginal people of the area. It has many springs, waterholes, '+
-				            'rock caves and ancient paintings. Uluru is listed as a World '+
-				            'Heritage Site.</p>'+
-				            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-				            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-				            '(last visited June 22, 2009).</p>'+
-				            '</div>'+
-				            '</div>';
-
-		  // Shapes define the clickable region of the icon. The type defines an HTML
-		  // <area> element 'poly' which traces out a polygon as a series of X,Y points.
-		  // The final coordinate closes the poly by connecting to the first coordinate.
-			  var shape = {
-			    coords: [1, 1, 1, 20, 18, 20, 18, 1],
-			    type: 'poly'
-			  };
+				function setMarkers(map) {
 
 			  var image = {
 						    url: 'static/img/icons/icon.png',
@@ -330,29 +284,41 @@
 
 						  };
 
-			for (var i = 0; i < beaches.length; i++) {
+					    var contentString01 = '<div class="tableMap"><div class="tableMapA"><img src="/media/" /></div><div class="tableMapB"><p>hola</p></br><a href="#" class="look" >Visita</a></div></div>';
 
-			    var beach = beaches[i];
+					    var marker01 = new google.maps.Marker({
+					      position: {lat: -2.1520378, lng: -80.1202942},
+					      map: map,
+					      icon: image,
+					      title: 'Guayaquil',
+					    	});
 
-			    var marker = new google.maps.Marker({
-			      position: {lat: beach[1], lng: beach[2]},
-			      map: map,
-			      icon: image,
-			      shape: shape,
-			      title: beach[0],
-			      zIndex: beach[3]
-			    });
+					    var infowindow01 = new google.maps.InfoWindow({
+						          content: contentString01
+						        });
 
-			    var infowindow = new google.maps.InfoWindow({
-				          content: contentString
-				        });
+					    marker01.addListener('click', function() {
+						          infowindow01.open(map, marker01);
+						        });
 
-			    marker.addListener('click', function() {
-				          infowindow.open(map, marker);
-				        });
-			}
 
-		}
+					    var contentString02 = '<div class="tableMap"><div class="tableMapA"><img src="/media/" /></div><div class="tableMapB"><p>Hola 2</p></br><a href="#" class="look" >Visita</a></div></div>';
+
+					    var marker02 = new google.maps.Marker({
+					      position: {lat: -0.2077414, lng: -78.4913177},
+					      map: map,
+					      icon: image,
+					      title: 'Bondi Beachs',
+					    	});
+
+					    var infowindow02 = new google.maps.InfoWindow({
+						          content: contentString02
+						        });
+
+					    marker02.addListener('click', function() {
+						          infowindow02.open(map, marker02);
+						        });
+					}
 
 			    </script>
 			    
